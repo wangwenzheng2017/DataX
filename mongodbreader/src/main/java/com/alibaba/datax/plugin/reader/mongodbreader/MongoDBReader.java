@@ -174,7 +174,7 @@ public class MongoDBReader extends Reader {
                                 record.addColumn(new StringColumn(tempArrayStr));
                             }
                         } else {
-                            record.addColumn(new StringColumn(tempCol.toString()));
+                            record.addColumn(new StringColumn(JSON.toJSONString(tempCol)));
                         }
                     }
                 }
